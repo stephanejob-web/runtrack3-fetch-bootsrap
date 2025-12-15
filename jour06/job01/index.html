@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Accueil</a>
+                        <a class="nav-link" href="https://laplateforme.io" id="accueilLink">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Units</a>
@@ -34,8 +34,8 @@
     </nav>
 
     <!-- Jumbotron -->
-    <div class="bg-light py-5 text-center">
-        <h1 class="display-3 fw-light">LaPlateforme_</h1>
+    <div class="bg-light py-5 text-center" id="jumbotron">
+        <h1 class="display-3 fw-light" id="jumbotronText">LaPlateforme_</h1>
     </div>
 
     <!-- Main Container -->
@@ -44,11 +44,11 @@
             <!-- Left Sidebar -->
             <div class="col-lg-2">
                 <div class="card mb-3">
-                    <img src="maquette.jpg" class="card-img-top" alt="Un Papillon">
+                    <img src="papillon.jpg" class="card-img-top" alt="Un Papillon">
                     <div class="card-body">
                         <h5 class="card-title">Un Papillon</h5>
                         <p class="card-text small">Un papillon, c'est un peu comme une chenille, mais avec des ailes. Ne pas ingérer.</p>
-                        <button class="btn btn-primary w-100">Commander votre propre papillon</button>
+                        <button class="btn btn-primary w-100" id="buyButterflyBtn">Commander votre propre papillon</button>
                     </div>
                 </div>
             </div>
@@ -61,8 +61,8 @@
                     <p>le monde est la matière, l'espace et les phénomènes qui nous sont accessibles par les sens, l'expérience ou la raison.</p>
                     <p>Le sens le plus courant désigne notre planète, la Terre, avec ses habitants, et son environnement plus ou moins naturel.</p>
                     <p>Le sens étendu désigne l'univers dans son ensemble.</p>
-                    <button class="btn btn-danger mt-3">Rebooter le Monde</button>
-                    <div class="spinner-border spinner-border-sm text-info ms-2" role="status">
+                    <button class="btn btn-danger mt-3" id="rebootBtn">Rebooter le Monde</button>
+                    <div class="spinner-border spinner-border-sm text-info ms-2" id="spinner" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
 
@@ -103,8 +103,12 @@
             <div class="text-center mb-2">
                 <strong>Installation de AI 9000</strong>
             </div>
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="d-flex align-items-center gap-2">
+                <button class="btn btn-sm btn-secondary" id="decreaseProgress">-</button>
+                <div class="progress flex-grow-1">
+                    <div class="progress-bar progress-bar-striped bg-warning" id="progressBar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <button class="btn btn-sm btn-secondary" id="increaseProgress">+</button>
             </div>
         </div>
     </div>
@@ -116,20 +120,21 @@
                 <!-- Left Form -->
                 <div class="col-lg-6">
                     <h5 class="mb-3">Recevez votre copie gratuite d'internet 2!</h5>
-                    <form>
+                    <form id="leftForm">
                         <div class="mb-3">
                             <div class="input-group">
                                 <span class="input-group-text">@</span>
-                                <input type="text" class="form-control" placeholder="Login">
+                                <input type="text" class="form-control" id="leftLogin" placeholder="Login">
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="row">
+
                                 <div class="col-6">
-                                    <input type="password" class="form-control" placeholder="Mot de Passe">
+                                    <input type="password" class="form-control" id="leftPassword" placeholder="Mot de Passe">
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="@example.com">
+                                    <input type="text" class="form-control" id="leftEmail" placeholder="@example.com">
                                 </div>
                             </div>
                         </div>
@@ -137,22 +142,22 @@
                             <label class="form-label">URL des Internets 2 et 2.1 Beta</label>
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="DogeCoin">
+                                    <input type="text" class="form-control" id="leftDogecoin" placeholder="DogeCoin">
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" class="form-control" placeholder=".00">
+                                    <input type="text" class="form-control" id="leftAmount" placeholder=".00">
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="url" class="form-control" placeholder="https://l33t.lptf/dkwb/berlusconimkt/">
+                            <input type="url" class="form-control" id="leftUrl" placeholder="https://l33t.lptf/dkwb/berlusconimkt/">
                         </div>
                     </form>
                 </div>
 
                 <!-- Right Form -->
                 <div class="col-lg-6">
-                    <form>
+                    <form id="rightForm">
                         <div class="mb-3">
                             <label for="emailAddress" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="emailAddress">
@@ -173,6 +178,176 @@
         </div>
     </div>
 
+    <!-- Modale d'achat papillon -->
+    <div class="modal fade" id="butterflyModal" tabindex="-1" aria-labelledby="butterflyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="butterflyModalLabel">Confirmation d'achat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Votre papillon a ete commande avec succes! Il arrivera dans 3-5 jours ouvrables.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale formulaire DGC -->
+    <div class="modal fade" id="dgcModal" tabindex="-1" aria-labelledby="dgcModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dgcModalLabel">Recapitulatif du formulaire</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="dgcModalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Citations Blade Runner
+            const bladeRunnerQuotes = [
+                "I've seen things you people wouldn't believe.",
+                "All those moments will be lost in time, like tears in rain.",
+                "It's too bad she won't live! But then again, who does?",
+                "More human than human is our motto.",
+                "Time to die.",
+                "I want more life, father.",
+                "Wake up! Time to die!",
+                "Quite an experience to live in fear, isn't it?"
+            ];
+
+            // Contenus pour la pagination
+            const jumbotronContents = [
+                "LaPlateforme_",
+                "Bienvenue dans le futur de la programmation!",
+                "Apprenez, codez, innovez!",
+                "Devenez le developpeur de demain!"
+            ];
+
+            // 1. Bouton papillon - Modale
+            $('#buyButterflyBtn').click(function() {
+                var butterflyModal = new bootstrap.Modal(document.getElementById('butterflyModal'));
+                butterflyModal.show();
+            });
+
+            // 2. Bouton Rebooter le Monde - Citation aleatoire
+            $('#rebootBtn').click(function() {
+                const randomQuote = bladeRunnerQuotes[Math.floor(Math.random() * bladeRunnerQuotes.length)];
+                $('#jumbotronText').text(randomQuote);
+            });
+
+            // 3. Pagination - Modifier le contenu du jumbotron
+            $('.pagination .page-link').click(function(e) {
+                e.preventDefault();
+                $('.pagination .page-item').removeClass('active');
+                $(this).parent().addClass('active');
+
+                const pageText = $(this).text();
+                if (pageText === '«' || pageText === '»') {
+                    return;
+                }
+
+                const pageNum = parseInt(pageText);
+                if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= jumbotronContents.length) {
+                    $('#jumbotronText').text(jumbotronContents[pageNum - 1]);
+                }
+            });
+
+            // 4. Liste groupee - Rendre l'element actif
+            $('.list-group-item').click(function(e) {
+                e.preventDefault();
+                $('.list-group-item').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            // 5. Progress bar - Augmenter/Diminuer
+            $('#increaseProgress').click(function() {
+                let currentValue = parseInt($('#progressBar').attr('aria-valuenow'));
+                if (currentValue < 100) {
+                    currentValue += 10;
+                    $('#progressBar').attr('aria-valuenow', currentValue);
+                    $('#progressBar').css('width', currentValue + '%');
+                }
+            });
+
+            $('#decreaseProgress').click(function() {
+                let currentValue = parseInt($('#progressBar').attr('aria-valuenow'));
+                if (currentValue > 0) {
+                    currentValue -= 10;
+                    $('#progressBar').attr('aria-valuenow', currentValue);
+                    $('#progressBar').css('width', currentValue + '%');
+                }
+            });
+
+            // 6. Detection de touches D-G-C
+            let keySequence = [];
+            const targetSequence = ['d', 'g', 'c'];
+
+            $(document).keydown(function(e) {
+                const key = e.key.toLowerCase();
+                keySequence.push(key);
+
+                if (keySequence.length > 3) {
+                    keySequence.shift();
+                }
+
+                if (keySequence.join('') === targetSequence.join('')) {
+                    // Recapitulatif du formulaire de gauche
+                    const login = $('#leftLogin').val() || '(vide)';
+                    const password = $('#leftPassword').val() || '(vide)';
+                    const email = $('#leftEmail').val() || '(vide)';
+                    const dogecoin = $('#leftDogecoin').val() || '(vide)';
+                    const amount = $('#leftAmount').val() || '(vide)';
+                    const url = $('#leftUrl').val() || '(vide)';
+
+                    const summary = `
+                        <p><strong>Login:</strong> ${login}</p>
+                        <p><strong>Mot de Passe:</strong> ${password}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        <p><strong>DogeCoin:</strong> ${dogecoin}</p>
+                        <p><strong>Montant:</strong> ${amount}</p>
+                        <p><strong>URL:</strong> ${url}</p>
+                    `;
+
+                    $('#dgcModalBody').html(summary);
+                    var dgcModal = new bootstrap.Modal(document.getElementById('dgcModal'));
+                    dgcModal.show();
+
+                    keySequence = [];
+                }
+            });
+
+            // 7. Formulaire de droite - Changer couleur du spinner
+            $('#rightForm').submit(function(e) {
+                e.preventDefault();
+
+                const email = $('#emailAddress').val();
+                const password = $('#password').val();
+
+                if (email && password) {
+                    const colors = ['text-primary', 'text-secondary', 'text-success', 'text-danger', 'text-warning', 'text-info'];
+                    const currentClasses = $('#spinner').attr('class').split(' ').filter(c => c.startsWith('text-'));
+
+                    currentClasses.forEach(c => $('#spinner').removeClass(c));
+
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    $('#spinner').addClass(randomColor);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
