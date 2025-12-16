@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 02 - Materialize Header</title>
+    <!-- Compiled and minified CSS Materialize 1.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <header>
+        <nav class="blue darken-2">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">Mon Site</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Formulaire de création de compte</h1>
+        <form>
+            <fieldset>
+                <legend>Civilité</legend>
+                <label>
+                    <input type="radio" name="civilite" value="M"> Monsieur
+                </label>
+                <label>
+                    <input type="radio" name="civilite" value="Mme"> Madame
+                </label>
+                <label>
+                    <input type="radio" name="civilite" value="Mlle"> Mademoiselle
+                </label>
+            </fieldset>
+
+            <div>
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom">
+            </div>
+
+            <div>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom">
+            </div>
+
+            <div>
+                <label for="adresse">Adresse</label>
+                <input type="text" id="adresse" name="adresse">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div>
+                <label for="password_confirm">Confirmation du mot de passe</label>
+                <input type="password" id="password_confirm" name="password_confirm">
+            </div>
+
+            <fieldset>
+                <legend>Passions</legend>
+                <label>
+                    <input type="checkbox" name="passion" value="informatique"> Informatique
+                </label>
+                <label>
+                    <input type="checkbox" name="passion" value="voyages"> Voyages
+                </label>
+                <label>
+                    <input type="checkbox" name="passion" value="sport"> Sport
+                </label>
+                <label>
+                    <input type="checkbox" name="passion" value="lecture"> Lecture
+                </label>
+            </fieldset>
+
+            <button type="submit">Valider</button>
+        </form>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html">Inscription</a></li>
+            <li><a href="index.html">Connexion</a></li>
+            <li><a href="index.html">Rechercher</a></li>
+        </ul>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
