@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 04 - Formulaire Materialize avec icônes</title>
+    <!-- Compiled and minified CSS Materialize 1.0.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="blue darken-2">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">Mon Site</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <h4 class="center-align">Formulaire de création de compte</h4>
+                <form class="card-panel">
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                <i class="material-icons left">person</i>
+                                <strong>Civilité</strong>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="civilite" type="radio" value="M" />
+                                    <span>Monsieur</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="civilite" type="radio" value="Mme" />
+                                    <span>Madame</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="civilite" type="radio" value="Mlle" />
+                                    <span>Mademoiselle</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="prenom" name="prenom" type="text" class="validate">
+                            <label for="prenom">Prénom</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="nom" name="nom" type="text" class="validate">
+                            <label for="nom">Nom</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">home</i>
+                            <input id="adresse" name="adresse" type="text" class="validate">
+                            <label for="adresse">Adresse</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" name="password" type="password" class="validate">
+                            <label for="password">Mot de passe</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password_confirm" name="password_confirm" type="password" class="validate">
+                            <label for="password_confirm">Confirmation du mot de passe</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12">
+                            <p>
+                                <i class="material-icons left">favorite</i>
+                                <strong>Passions</strong>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="passion" value="informatique" />
+                                    <span>Informatique</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="passion" value="voyages" />
+                                    <span>Voyages</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="passion" value="sport" />
+                                    <span>Sport</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="passion" value="lecture" />
+                                    <span>Lecture</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <button class="btn waves-effect waves-light blue darken-2" type="submit" name="action">
+                                Valider
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer blue darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <h5 class="white-text">Navigation</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Inscription</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Connexion</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2025 Mon Site
+            </div>
+        </div>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
