@@ -29,6 +29,37 @@
             background-color: #546e7a;
             color: white;
         }
+        .carousel {
+            height: 600px;
+            margin-bottom: 40px;
+        }
+        .carousel.carousel-slider .carousel-item {
+            width: 100%;
+            height: 100%;
+        }
+        .carousel .carousel-item img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+        .carousel .carousel-item h2 {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 0;
+            position: absolute;
+            bottom: 80px;
+            width: 100%;
+        }
+        .carousel .carousel-item p {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            margin: 0;
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -95,6 +126,44 @@
                 <i class="material-icons medium">photo_library</i>
                 Galerie Photo
             </h3>
+
+            <!-- Carrousel -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="carousel carousel-slider center">
+                        <div class="carousel-item blue-grey darken-2 white-text" href="#one!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/800px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds 2018">
+                            <h2>Linus Torvalds</h2>
+                            <p class="white-text flow-text">Créateur du noyau Linux</p>
+                        </div>
+                        <div class="carousel-item blue-grey darken-3 white-text" href="#two!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/800px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="LinuxCon Europe">
+                            <h2>LinuxCon Europe</h2>
+                            <p class="white-text flow-text">Conférences mondiales</p>
+                        </div>
+                        <div class="carousel-item blue-grey darken-2 white-text" href="#three!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Linus_Torvalds.jpeg/800px-Linus_Torvalds.jpeg" alt="Portrait officiel">
+                            <h2>Portrait Officiel</h2>
+                            <p class="white-text flow-text">Pionnier de l'Open Source</p>
+                        </div>
+                        <div class="carousel-item blue-grey darken-1 white-text" href="#four!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Linus_Torvalds_2012.jpg/800px-Linus_Torvalds_2012.jpg" alt="TED 2012">
+                            <h2>TED Conference 2012</h2>
+                            <p class="white-text flow-text">Partage de sa vision</p>
+                        </div>
+                        <div class="carousel-item blue-grey darken-3 white-text" href="#five!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Linus_Torvalds_at_his_desk.jpg/800px-Linus_Torvalds_at_his_desk.jpg" alt="Au travail">
+                            <h2>Dans son bureau</h2>
+                            <p class="white-text flow-text">Développement quotidien</p>
+                        </div>
+                        <div class="carousel-item blue-grey darken-2 white-text" href="#six!">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Linus_Torvalds_talking.jpg/800px-Linus_Torvalds_talking.jpg" alt="Présentation">
+                            <h2>Open Source Summit</h2>
+                            <p class="white-text flow-text">Leadership communautaire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Image principale featured -->
             <div class="row">
@@ -413,6 +482,23 @@
             // Materialbox pour images lightbox
             var elems = document.querySelectorAll('.materialboxed');
             M.Materialbox.init(elems);
+
+            // Carousel
+            var carouselElems = document.querySelectorAll('.carousel.carousel-slider');
+            M.Carousel.init(carouselElems, {
+                fullWidth: true,
+                indicators: true,
+                duration: 200,
+                shift: 50
+            });
+
+            // Auto-play carousel
+            setInterval(function() {
+                var instances = M.Carousel.getInstance(carouselElems[0]);
+                if (instances) {
+                    instances.next();
+                }
+            }, 4000);
 
             // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
