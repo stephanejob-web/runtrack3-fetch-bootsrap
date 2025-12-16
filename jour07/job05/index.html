@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job 05 - Linus Torvalds Tribute</title>
+    <title>Linus Torvalds - Galerie Tribute</title>
     <!-- Compiled and minified CSS Materialize 1.0.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #37474f 0%, #546e7a 100%);
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+        .card-image img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .card-image.featured img {
+            height: 500px;
+        }
+        .parallax-container {
+            height: 400px;
+        }
+        .chip-custom {
+            margin: 5px;
+            background-color: #546e7a;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,78 +40,90 @@
                     Linus Torvalds
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Linux</a></li>
-                    <li><a href="index.html">Git</a></li>
-                    <li><a href="index.html">Open Source</a></li>
-                    <li><a href="index.html">Biography</a></li>
-                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#citations">Citations</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container center white-text">
+            <h1>Linus Torvalds</h1>
+            <h5 class="light">Créateur de Linux et Git - Pionnier de l'Open Source</h5>
+            <p class="flow-text">Helsinki, Finlande • Né le 28 décembre 1969</p>
+            <a href="#gallery" class="btn-large waves-effect waves-light blue-grey lighten-1">
+                <i class="material-icons left">photo_library</i>
+                Découvrir la galerie
+            </a>
+        </div>
+    </div>
+
     <main class="container">
-        <!-- Hero Section -->
-        <section class="section center">
-            <h2 class="blue-grey-text text-darken-4">Linus Torvalds</h2>
-            <p class="flow-text grey-text">Créateur de Linux et Git - Pionnier de l'Open Source</p>
-            <div class="divider"></div>
+        <!-- Section Bio avec image -->
+        <section class="section">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/440px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds Portrait" class="materialboxed">
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m8">
+                    <h4 class="blue-grey-text text-darken-3">Biographie</h4>
+                    <p class="flow-text">Linus Benedict Torvalds est un informaticien américano-finlandais, célèbre pour avoir créé le noyau Linux en 1991 alors qu'il n'était qu'étudiant à l'Université d'Helsinki.</p>
+                    <p>Son travail a révolutionné le monde de l'informatique et de l'open source. Aujourd'hui, Linux alimente des milliards d'appareils à travers le monde.</p>
+                    <div>
+                        <span class="chip-custom"><i class="material-icons tiny">code</i> Linux Kernel</span>
+                        <span class="chip-custom"><i class="material-icons tiny">source</i> Git</span>
+                        <span class="chip-custom"><i class="material-icons tiny">public</i> Open Source</span>
+                        <span class="chip-custom"><i class="material-icons tiny">emoji_events</i> Millennium Technology Prize</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Galerie principale -->
-        <section class="section">
-            <h4 class="center blue-grey-text text-darken-3">Galerie Photo</h4>
+        <div class="divider"></div>
 
-            <!-- Première rangée - Grande image featured -->
+        <!-- Galerie Photos -->
+        <section class="section" id="gallery">
+            <h3 class="center blue-grey-text text-darken-3">
+                <i class="material-icons medium">photo_library</i>
+                Galerie Photo
+            </h3>
+
+            <!-- Image principale featured -->
             <div class="row">
                 <div class="col s12">
                     <div class="card hoverable">
-                        <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/800px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds" class="materialboxed" width="100%">
-                            <span class="card-title blue-grey darken-4" style="padding: 10px 20px;">Linus Torvalds</span>
+                        <div class="card-image featured">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/1024px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Linus à LinuxCon" class="materialboxed">
+                            <span class="card-title blue-grey darken-4" style="padding: 15px 25px; font-size: 2em;">
+                                <i class="material-icons left">stars</i>LinuxCon Europe
+                            </span>
                         </div>
                         <div class="card-content">
-                            <p>Linus Benedict Torvalds, né le 28 décembre 1969 à Helsinki en Finlande, est un informaticien américano-finlandais. Il est le créateur, et principal développeur, du noyau Linux.</p>
+                            <h5>Conférence LinuxCon Europe</h5>
+                            <p>Linus Torvalds lors d'une présentation à la LinuxCon Europe, où il partage régulièrement les avancées du kernel Linux avec la communauté mondiale de développeurs.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Deuxième rangée - 2 images moyennes -->
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card hoverable">
-                        <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/640px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg" alt="Linus Torvalds à LinuxCon" class="materialboxed responsive-img">
-                            <span class="card-title">LinuxCon Europe</span>
-                        </div>
-                        <div class="card-content">
-                            <p><i class="material-icons tiny">event</i> Conférence Linux</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m6">
-                    <div class="card hoverable">
-                        <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Linus_Torvalds.jpeg/640px-Linus_Torvalds.jpeg" alt="Linus Torvalds portrait" class="materialboxed responsive-img">
-                            <span class="card-title">Portrait officiel</span>
-                        </div>
-                        <div class="card-content">
-                            <p><i class="material-icons tiny">person</i> Créateur de Linux</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Troisième rangée - 3 images petites -->
+            <!-- Galerie 3 colonnes -->
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Linus_Torvalds_%28cropped%29.jpg/440px-Linus_Torvalds_%28cropped%29.jpg" alt="Linus Torvalds" class="materialboxed responsive-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Linus_Torvalds.jpeg/440px-Linus_Torvalds.jpeg" alt="Portrait Linus" class="materialboxed responsive-img">
+                            <span class="card-title">Portrait Officiel</span>
                         </div>
-                        <div class="card-content center">
-                            <span class="card-title">Conférence</span>
+                        <div class="card-content">
+                            <p><i class="material-icons tiny blue-grey-text">person</i> Photo officielle</p>
                         </div>
                     </div>
                 </div>
@@ -97,37 +131,75 @@
                     <div class="card hoverable">
                         <div class="card-image">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Linus_Torvalds_2012.jpg/440px-Linus_Torvalds_2012.jpg" alt="Linus 2012" class="materialboxed responsive-img">
-                        </div>
-                        <div class="card-content center">
                             <span class="card-title">TED 2012</span>
+                        </div>
+                        <div class="card-content">
+                            <p><i class="material-icons tiny blue-grey-text">event</i> Conférence TED</p>
                         </div>
                     </div>
                 </div>
                 <div class="col s12 m4">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Linus_Torvalds_at_his_desk.jpg/440px-Linus_Torvalds_at_his_desk.jpg" alt="Linus au travail" class="materialboxed responsive-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Linus_Torvalds_%28cropped%29.jpg/440px-Linus_Torvalds_%28cropped%29.jpg" alt="Linus Speaking" class="materialboxed responsive-img">
+                            <span class="card-title">Présentation</span>
                         </div>
-                        <div class="card-content center">
-                            <span class="card-title">Au travail</span>
+                        <div class="card-content">
+                            <p><i class="material-icons tiny blue-grey-text">mic</i> Intervention publique</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Quatrième rangée - Mix de tailles -->
+            <!-- Rangée Linux et Git -->
             <div class="row">
-                <div class="col s12 m8">
+                <div class="col s12 m6">
                     <div class="card hoverable">
                         <div class="card-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Linus_Torvalds_talking.jpg/800px-Linus_Torvalds_talking.jpg" alt="Linus Torvalds speaking" class="materialboxed responsive-img">
-                            <span class="card-title">Présentation publique</span>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/440px-Tux.svg.png" alt="Linux Tux Mascot" class="materialboxed responsive-img" style="background: white; padding: 20px;">
+                            <span class="card-title blue-grey darken-4">Tux - Mascotte Linux</span>
                         </div>
                         <div class="card-content">
-                            <p><strong>Open Source Summit</strong> - Linus Torvalds partageant sa vision de l'open source et du développement collaboratif.</p>
+                            <h6><strong>Linux</strong></h6>
+                            <p>Tux est le manchot emblématique du système d'exploitation Linux, créé en 1996 par Larry Ewing.</p>
                         </div>
-                        <div class="card-action">
-                            <a href="#" class="blue-grey-text">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/640px-Git-logo.svg.png" alt="Git Logo" class="materialboxed responsive-img" style="background: white; padding: 20px;">
+                            <span class="card-title blue-grey darken-4">Git Version Control</span>
+                        </div>
+                        <div class="card-content">
+                            <h6><strong>Git</strong></h6>
+                            <p>Système de contrôle de version distribué créé par Linus Torvalds en 2005 pour le développement du kernel Linux.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus d'images de Linus -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Linus_Torvalds_at_his_desk.jpg/440px-Linus_Torvalds_at_his_desk.jpg" alt="Linus au bureau" class="materialboxed responsive-img">
+                            <span class="card-title">Au travail</span>
+                        </div>
+                        <div class="card-content center">
+                            <p><i class="material-icons tiny">work</i> Dans son bureau</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Linus_Torvalds_talking.jpg/440px-Linus_Torvalds_talking.jpg" alt="Linus talking" class="materialboxed responsive-img">
+                            <span class="card-title">En discussion</span>
+                        </div>
+                        <div class="card-content center">
+                            <p><i class="material-icons tiny">forum</i> Session Q&A</p>
                         </div>
                     </div>
                 </div>
@@ -135,39 +207,165 @@
                     <div class="card hoverable">
                         <div class="card-image">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Linus_Torvalds_smiling.jpg/440px-Linus_Torvalds_smiling.jpg" alt="Linus souriant" class="materialboxed responsive-img">
-                        </div>
-                        <div class="card-content center">
                             <span class="card-title">Leadership</span>
                         </div>
-                    </div>
-                    <div class="card blue-grey lighten-5">
                         <div class="card-content center">
-                            <i class="material-icons large blue-grey-text">stars</i>
-                            <p class="flow-text">30+ ans</p>
-                            <p>de contribution à l'open source</p>
+                            <p><i class="material-icons tiny">emoji_emotions</i> Visionnaire</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Section Timeline -->
+        <div class="divider"></div>
+
+        <!-- Section Projets -->
+        <section class="section" id="projects">
+            <h4 class="center blue-grey-text text-darken-3">Projets Majeurs</h4>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-4 white-text hoverable">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <i class="material-icons left large">memory</i>
+                                Linux Kernel
+                            </span>
+                            <p><strong>1991 - Aujourd'hui</strong></p>
+                            <p>Système d'exploitation open source qui alimente aujourd'hui la majorité des serveurs web, smartphones Android, superordinateurs et objets connectés dans le monde.</p>
+                            <br>
+                            <div class="chip blue-grey lighten-2">30+ milliards d'appareils</div>
+                            <div class="chip blue-grey lighten-2">75% des serveurs</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-4 white-text hoverable">
+                        <div class="card-content">
+                            <span class="card-title">
+                                <i class="material-icons left large">account_tree</i>
+                                Git
+                            </span>
+                            <p><strong>2005 - Aujourd'hui</strong></p>
+                            <p>Système de contrôle de version distribué, devenu le standard de l'industrie pour la gestion de code source. Utilisé par des millions de développeurs.</p>
+                            <br>
+                            <div class="chip blue-grey lighten-2">100M+ utilisateurs</div>
+                            <div class="chip blue-grey lighten-2">Standard mondial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Timeline -->
+        <section class="section" id="timeline">
+            <h4 class="center blue-grey-text text-darken-3">
+                <i class="material-icons">timeline</i>
+                Chronologie
+            </h4>
             <div class="row">
                 <div class="col s12">
-                    <div class="card blue-grey darken-4 white-text">
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue-grey">cake</i>
+                            <span class="title"><strong>1969</strong> - Naissance</span>
+                            <p>28 décembre à Helsinki, Finlande</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue-grey darken-1">school</i>
+                            <span class="title"><strong>1988</strong> - Université</span>
+                            <p>Entre à l'Université d'Helsinki en informatique</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue-grey darken-2">rocket_launch</i>
+                            <span class="title"><strong>1991</strong> - Création de Linux</span>
+                            <p>Première version du noyau Linux (0.01) publiée</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue-grey darken-3">corporate_fare</i>
+                            <span class="title"><strong>1997</strong> - Transmeta</span>
+                            <p>Rejoint Transmeta Corporation en Californie</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle blue-grey darken-4">code</i>
+                            <span class="title"><strong>2005</strong> - Création de Git</span>
+                            <p>Développe Git pour gérer le code source de Linux</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle amber darken-2">emoji_events</i>
+                            <span class="title"><strong>2012</strong> - Millennium Technology Prize</span>
+                            <p>Reçoit le prix technologique le plus prestigieux</p>
+                        </li>
+                        <li class="collection-item avatar">
+                            <i class="material-icons circle green">trending_up</i>
+                            <span class="title"><strong>2025</strong> - Aujourd'hui</span>
+                            <p>Continue à maintenir le kernel Linux activement</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Citations -->
+        <section class="section" id="citations">
+            <h4 class="center blue-grey-text text-darken-3">
+                <i class="material-icons">format_quote</i>
+                Citations Célèbres
+            </h4>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card blue-grey lighten-5 hoverable">
                         <div class="card-content">
-                            <span class="card-title"><i class="material-icons left">timeline</i>Timeline</span>
-                            <ul class="collection">
-                                <li class="collection-item blue-grey lighten-5">
-                                    <strong>1991</strong> - Création du noyau Linux
-                                </li>
-                                <li class="collection-item blue-grey lighten-5">
-                                    <strong>2005</strong> - Développement de Git
-                                </li>
-                                <li class="collection-item blue-grey lighten-5">
-                                    <strong>Aujourd'hui</strong> - Linux alimente des milliards d'appareils
-                                </li>
-                            </ul>
+                            <i class="material-icons left blue-grey-text">format_quote</i>
+                            <p class="flow-text">"Talk is cheap. Show me the code."</p>
+                            <p class="right-align"><em>- Linus Torvalds</em></p>
                         </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card blue-grey lighten-5 hoverable">
+                        <div class="card-content">
+                            <i class="material-icons left blue-grey-text">format_quote</i>
+                            <p class="flow-text">"Intelligence is the ability to avoid doing work, yet getting the work done."</p>
+                            <p class="right-align"><em>- Linus Torvalds</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="section">
+            <div class="row">
+                <div class="col s12 m3 center">
+                    <div class="card-panel blue-grey darken-3 white-text">
+                        <i class="material-icons large">calendar_today</i>
+                        <h4>30+</h4>
+                        <p>Années de développement</p>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+                    <div class="card-panel blue-grey darken-3 white-text">
+                        <i class="material-icons large">devices</i>
+                        <h4>30B+</h4>
+                        <p>Appareils sous Linux</p>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+                    <div class="card-panel blue-grey darken-3 white-text">
+                        <i class="material-icons large">people</i>
+                        <h4>100M+</h4>
+                        <p>Utilisateurs de Git</p>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+                    <div class="card-panel blue-grey darken-3 white-text">
+                        <i class="material-icons large">emoji_events</i>
+                        <h4>∞</h4>
+                        <p>Impact sur le monde</p>
                     </div>
                 </div>
             </div>
@@ -179,23 +377,29 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Linus Torvalds</h5>
-                    <p class="grey-text text-lighten-4">Créateur de Linux et Git, pionnier de l'open source.</p>
+                    <p class="grey-text text-lighten-4">Créateur de Linux et Git, pionnier de l'open source et de la collaboration mondiale.</p>
                 </div>
-                <div class="col l4 offset-l2 s12">
+                <div class="col l3 s12">
+                    <h5 class="white-text">Projets</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#projects">Linux Kernel</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#projects">Git</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
                     <h5 class="white-text">Liens</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Linux</a></li>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Git</a></li>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Open Source</a></li>
-                        <li><a class="grey-text text-lighten-3" href="index.html">Biography</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#gallery">Galerie</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#timeline">Timeline</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#citations">Citations</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright blue-grey darken-4">
             <div class="container">
-                © 2025 Linus Torvalds Tribute
-                <a class="grey-text text-lighten-4 right" href="#!">Plus d'informations</a>
+                © 2025 Linus Torvalds Tribute Page
+                <a class="grey-text text-lighten-4 right" href="#!">Materialize Gallery</a>
             </div>
         </div>
     </footer>
@@ -203,11 +407,23 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- Initialisation du Materialbox pour l'effet lightbox sur les images -->
+    <!-- Initialisation Materialize -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Materialbox pour images lightbox
             var elems = document.querySelectorAll('.materialboxed');
-            var instances = M.Materialbox.init(elems);
+            M.Materialbox.init(elems);
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
         });
     </script>
 </body>
